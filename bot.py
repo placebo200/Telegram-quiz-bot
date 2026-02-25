@@ -165,7 +165,8 @@ async def stop_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("🛑 Quiz stopped")
 # ===== MAIN =====
 import os
-app = ApplicationBuilder().token(os.getenv("8724615319:AAEUBwBf8nHWcw7AUMzeIMy1L8kSDLMEoqY")).build()
+BOT_TOKEN = os.environ["BOT_TOKEN"]
+app = ApplicationBuilder().token(BOT_TOKEN).build()
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("stop", stop_quiz))
