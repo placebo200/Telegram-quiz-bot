@@ -1,6 +1,12 @@
 # Ignore Google Service Account credentials
 creds.json
 
-# Python cache
+# Python cache files
 pycache/
 *.pyc
+
+# Environment variables file
+.env
+
+# Logs
+*.log
